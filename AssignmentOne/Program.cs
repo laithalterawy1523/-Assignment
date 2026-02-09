@@ -1,13 +1,11 @@
-﻿string billAmount;
+﻿double billAmount;
 Console.Write("Please Enter The BillAmount:");
-billAmount = Console.ReadLine();
-double BillAmount = Convert.ToDouble(billAmount);
-if (BillAmount >= 500)
-    BillAmount = BillAmount - (BillAmount * .2);
-else if (BillAmount > 300 & BillAmount <= 499)
-    BillAmount = BillAmount - (BillAmount * .1);
+billAmount = Convert.ToDouble(Console.ReadLine());
+if (billAmount >= 500)
+    billAmount = billAmount - (billAmount * .2);
+else if (billAmount > 300 & billAmount <= 499)
+    billAmount = billAmount - (billAmount * .1);
 else
     Console.WriteLine("No Discount Was Applied The Invoice");
 
-Console.WriteLine($"Final Price : {BillAmount}");
-//change
+Console.WriteLine($"Final Price : {billAmount}");
